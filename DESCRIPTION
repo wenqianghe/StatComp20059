@@ -1,0 +1,14 @@
+Package: StatComp20059
+Type: Package
+Title: The R package of 20059 for Statistical Computing course
+Version: 0.1.0
+Author: He Wenqiang
+Maintainer: He Wenqiang <wenqianghe@mail.ustc.edu.cn>
+Description: The package includes a softmax function, a tanh function and all my homework answers
+License: GPL (>= 2)
+Encoding: UTF-8
+LazyData: false
+Imports: Rcpp (>= 1.0.5),quantmod,stats,xts,energy,devtools,microbenchmark,MASS,boot,bootstrap,DAAG,Ball,parallel,RANN
+VignetteBuilder: knitr
+Suggests: knitr, rmarkdown
+RoxygenNote: 7.1.1
