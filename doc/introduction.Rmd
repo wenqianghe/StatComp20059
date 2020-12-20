@@ -1,0 +1,122 @@
+---
+title: "Introduction to StatComp20059"
+author: '20059'
+date: "2020/12/18"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to StatComp20059}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+## Overview
+
+__StatComp20059__ is a simple R package developed by 20059 for the Statistical Computing course instructed by Zhang Hong. It includes a softmax function __softmax__ (calculates the softmax value of the input) and a tanh function __tanh__ (calculates the tanh value of the input). 
+
+In addition, the __stock_predict__ function could predict the probability of a stock going up tomorrow, and the stock's name is the argument of this function, e.g. 'AAPL'.
+
+Besides, all my homework answers are included in this package.
+
+## softmax
+
+The __softmax__ function calculates the softmax value of the input, which is one of the typical activation functions in machine learning.
+
+The source R code for __softmax__ is as follows:
+
+```{r 1}
+softmax <-function(x) {
+  return (exp(x)/sum(exp(x)))
+}
+```
+
+The softmax function returns the softmax values of the input data, which could be in form of a matrix, a list, a vector...
+
+For example,
+
+```{r 2}
+library(StatComp20059)
+x=c(15,7,10,23,46,8,33)
+sx <- softmax(x)
+list(x=x,softmax_x=sx)
+```
+
+
+## tanh
+
+The __tanh__ function calculates the tanh value of the input, which is one of the typical activation functions in machine learning.
+
+The source R code for __tanh__ is as follows:
+
+```{r 3}
+tanh <-function(x) {
+  return ((exp(x)-exp(-x))/(exp(x)+exp(-x)))
+}
+```
+
+The tanh function returns the tanh values of the input data, which could be in form of a matrix, a list, a vector...
+
+For example,
+
+```{r 4}
+library(StatComp20059)
+x <- c(0.15,0.77,-0.10,2.3,-0.46,0.8,-3.3)
+tanhx <- tanh(x)
+list(x=x,tanh_x=tanhx)
+```
+
+## stock_predict
+The __stock_predict__ function predicts the probability of a stock going up tomorrow, and the code is as follows:
+
+```{r 5,eval=FALSE}
+library(StatComp20059)
+stock_predict<-function(symbol)
+{
+
+  #To ignore the warnings during usage
+  options(warn=-1)
+  options("getSymbols.warning4.0"=FALSE)
+  #Importing price data for the givensymbol
+  data<-data.frame(xts::as.xts(get(quantmod::getSymbols(symbol))))
+
+  #Assighning the column names
+  colnames(data) <-c("data.Open","data.High","data.Low","data.Close","data.Volume","data.Adjusted")
+
+  #Creating lag and lead features ofprice column.
+  data <-xts::xts(data,order.by=as.Date(rownames(data)))
+  data <- as.data.frame(merge(data,lm1=stats::lag(data[,'data.Adjusted'],c(-1,1,3,5,10))))
+
+  #Extracting features from Date
+  data$Date<-as.Date(rownames(data))
+  data$Day_of_month<-as.integer(format(as.Date(data$Date),"%d"))
+  data$Month_of_year<-as.integer(format(as.Date(data$Date),"%m"))
+  data$Year<-as.integer(format(as.Date(data$Date),"%y"))
+  data$Day_of_week<-as.factor(weekdays(data$Date))
+
+  #Naming variables for reference
+  today <- 'data.Adjusted'
+  tommorow <- 'data.Adjusted.5'
+
+  #Creating outcome
+  data$up_down <-as.factor(ifelse(data[,tommorow] > data[,today], 1, 0))
+
+  #Creating train and test sets
+  train<-data[stats::complete.cases(data),]
+  test<-data[nrow(data),]
+
+  #Training model
+  model<-stats::glm(up_down~data.Open+data.High+data.Low+data.Close+
+                      data.Volume+data.Adjusted+data.Adjusted.1+
+                      data.Adjusted.2+data.Adjusted.3+data.Adjusted.4+
+                      Day_of_month+Month_of_year+Year+Day_of_week,
+                    family=binomial(link='logit'),data=train)
+
+  #Making Predictions
+  pred<-as.numeric(stats::predict(model,test[,c('data.Open','data.High','data.Low','data.Close','data.Volume','data.Adjusted','data.Adjusted.1','data.Adjusted.2','data.Adjusted.3','data.Adjusted.4','Day_of_month','Month_of_year','Year','Day_of_week')],type= 'response'))
+
+  #Printing results
+  print("Probability of Stockprice going up tommorow:")
+  print(pred)
+}
+
+stock_predict('GOOGL')
+```
