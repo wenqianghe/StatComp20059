@@ -72,7 +72,7 @@ E[XY] &= E[X]E[Y]
 
 # HW1-2020-09-22
 ## Question 1
-![Question 1](HW1-Q1.png)
+![Question 1](HW1-Q1.PNG)
 
 ## Answer 1
 Firstly, we get the inverse function $F^{-1}(x)$ as follows:
@@ -114,7 +114,7 @@ lines(y, 1-(2*y^(-1))^2)
 ```
 
 ## Question 2
-![Question 2](HW1-Q2.png)
+![Question 2](HW1-Q2.PNG)
 
 ## Answer 2
 
@@ -155,7 +155,7 @@ hist(x, prob = TRUE)
 ```
 
 ## Question 3
-![Question 3](HW1-Q3.png)
+![Question 3](HW1-Q3.PNG)
 
 ## Answer 3
 
@@ -199,7 +199,7 @@ lines(y, 3*y/4-y^3/4)
 ```
 
 ## Question 4
-![Question 4](HW1-Q4.png)
+![Question 4](HW1-Q4.PNG)
 
 ## Answer 4
 
@@ -223,7 +223,7 @@ lines(y, 1-(2/(2+y))^4)
 # HW2-2020-10-13
 ## Question 1
 
-![Question 1](HW2-Q1.png)
+![Question 1](HW2-Q1.PNG)
 
 ## Answer 1
 
@@ -269,9 +269,9 @@ print(c(th,1-cos(pi/3)))
 ```
 
 ## Question 2
-![Question 2](HW2-Q2.png)
-![Question 2](HW2-Q2-2.png)
-![Question 2](HW2-Q2-3.png)
+![Question 2](HW2-Q2.PNG)
+![Question 2](HW2-Q2-2.PNG)
+![Question 2](HW2-Q2-3.PNG)
 ## Answer 2
 
 The original estimator is:
@@ -355,9 +355,9 @@ print(c(ves,var(MC1),1-ves/var(MC1)))
 
 ## Question 3
 
-![Question 3](HW2-Q3.png)
+![Question 3](HW2-Q3.PNG)
 
-![Question 3](HW2-Q3-2.png)
+![Question 3](HW2-Q3-2.PNG)
 
 
 
@@ -390,7 +390,7 @@ $$
 # HW3-2020-10-20
 ## Question 1
 
-![Question 1](HW3-Q1.png)
+![Question 1](HW3-Q1.PNG)
 
 ## Answer 1
 
@@ -445,10 +445,10 @@ Therefore, the function ${f_2}\left( x \right) = {e^{ - x}}$ produces a smaller 
 
 ## Question 2
 
-![Question 2](HW3-Q2.png)
+![Question 2](HW3-Q2.PNG)
 
-![Question 2](HW3-Q2-1.png)
-![Question 2](HW3-Q2-2.png)
+![Question 2](HW3-Q2-1.PNG)
+![Question 2](HW3-Q2-2.PNG)
 
 ## Answer 2
 The stratified importance sampling estimate in Example 5.13 is: 
@@ -489,7 +489,7 @@ apply(est,2,sd)
 ```
 
 ## Question 3
-![Question 3](HW3-Q3.png)
+![Question 3](HW3-Q3.PNG)
 
 ## Answer 3
 Given that $\ln X \sim N\left( {\mu ,{\delta ^2}} \right)$ and $\alpha  = 0.05$ , suppose $Y=\ln X$ and 
@@ -522,9 +522,9 @@ S_n^* & = \sqrt {\frac{1}{{n - 1}}\sum\limits_{i = 1}^n {{{\left( {{Y_i} - \bar 
 \end{equation}
 
 ## Question 4
-![Question 4](HW3-Q4.png)
+![Question 4](HW3-Q4.PNG)
 
-![Question 4](HW3-Q4-1.png)
+![Question 4](HW3-Q4-1.PNG)
 
 ## Answer 4
 The MC estimate of the interval of ECP is:
@@ -548,7 +548,7 @@ Therefore, its ECP is much larger than that in Example 6.4.
 # HW4-2020-10-27
 ## Question 1
 
-![Question 1](HW4-Q1.png)
+![Question 1](HW4-Q1.PNG)
 
 ### Beta分布用偏度检验正态性
 ```{r 41}
@@ -631,11 +631,11 @@ rbind(df,power)
 
 ## Question 2
 
-![Question 2](HW4-Q2.png)
+![Question 2](HW4-Q2.PNG)
 
-![Question 2](HW4-Q2-1.png)
+![Question 2](HW4-Q2-1.PNG)
 
-![Question 3](HW4-Q2-2.png)
+![Question 3](HW4-Q2-2.PNG)
 
 ## Answer 2
 
@@ -714,7 +714,7 @@ rbind(n1,fpr)
 
 ## Question 3
 
-![Question 3](HW4-Q3.png)
+![Question 3](HW4-Q3.PNG)
 
 ## Answer 3
 #### The Example 6.8 for multivariate skewness test is:
@@ -818,7 +818,7 @@ rbind(epsilon,pwr)
 ```
 ## Question 4
 
-![Question 4](HW4-Q4.png)
+![Question 4](HW4-Q4.PNG)
 
 ## Answer 4
 #### 1
@@ -835,7 +835,7 @@ We need to know the degree of freedom.
 # HW5-2020-11-03
 ## Question 1
 
-![Question 1](HW5-Q1.png)
+![Question 1](HW5-Q1.PNG)
 
 ## Answer 1
 ```{r 51}
@@ -874,9 +874,9 @@ se.jack=se.jack),3)
 
 ## Question 2
 
-![Question 2](HW5-Q2.png)
+![Question 2](HW5-Q2.PNG)
 
-![Question 2](HW5-Q2-1.png)
+![Question 2](HW5-Q2-1.PNG)
 ## Answer 2
 ```{r 52}
 set.seed(12345)
@@ -931,11 +931,11 @@ cat("norm CI is: ",ci.norm)
 
 ## Question 3
 
-![Question 3](HW5-Q3.png)
+![Question 3](HW5-Q3.PNG)
 
-![Question 3](HW5-Q2-2.png)
+![Question 3](HW5-Q2-2.PNG)
 
-![Question 3](HW5-Q3-2.png)
+![Question 3](HW5-Q3-2.PNG)
 
 ## Answer 3
 ```{r 53}
@@ -971,12 +971,12 @@ se.jack=se.jack),3)
 ```
 
 ## Question 4
-![Question 4](HW5-Q4.png)
+![Question 4](HW5-Q4.PNG)
 
-![Question 4](HW5-Q4-1.png)
+![Question 4](HW5-Q4-1.PNG)
 
 
-![Question 4](HW5-Q4-2.png)
+![Question 4](HW5-Q4-2.PNG)
 
 
 ## Answer 4
@@ -1090,7 +1090,7 @@ still be the best fit for the data.
 # HW6-2020-11-10
 ## Question 1
 
-![Question 1](HW6-Q1.png)
+![Question 1](HW6-Q1.PNG)
 
 ## Answer 1
 
@@ -1147,7 +1147,7 @@ cat("Energy test: ", eqdist.etest(z, sizes=N, R=m)$p.value)
 
 ## Question 2
 
-![Question 2](HW6-Q2.png)
+![Question 2](HW6-Q2.PNG)
 
 ```{r 62}
 #Unequal variances and equal expectations
@@ -1375,7 +1375,7 @@ cat("Ball power is: ", power3)
 # HW7-2020-11-17
 ## Question 1
 
-![Question 1](HW7-Q1.png)
+![Question 1](HW7-Q1.PNG)
 
 
 ## Answer 1
@@ -1450,7 +1450,7 @@ According to the results, the bigger the variance is, the more quickly it conver
 
 ## Question 2
 
-![Question 2](HW7-Q2.png)
+![Question 2](HW7-Q2.PNG)
 
 
 ## Answer 2
@@ -1534,8 +1534,8 @@ abline(h=1.1, lty=2)
 
 ## Question 3
 
-![Question 3](HW7-Q3.png)
-![Question 3](HW7-Q3-1.png)
+![Question 3](HW7-Q3.PNG)
+![Question 3](HW7-Q3-1.PNG)
 
 
 ## Answer 3
@@ -1569,7 +1569,7 @@ rbind(K,points)
 # HW8-2020-11-24
 ## Question 1
 
-![Question 1](HW8-Q1.png)
+![Question 1](HW8-Q1.PNG)
 
 ## Answer 1
 可列出如下方程：
@@ -1618,7 +1618,7 @@ rbind(p,q,logp,logq)
 
 ## Question 2
 
-![Question 2](HW8-Q2.png)
+![Question 2](HW8-Q2.PNG)
 
 ## Answer 2
 ```{r 82}
@@ -1654,9 +1654,9 @@ print(lapply(seq_along(formulas),linearFit))
 
 ## Question 3
 
-![Question 3](HW8-Q3.png)
+![Question 3](HW8-Q3.PNG)
 
-![Question 3](HW8-Q3-1.png)
+![Question 3](HW8-Q3-1.PNG)
 
 ## Answer 3
 ```{r 83}
@@ -1688,7 +1688,7 @@ The arguments the function takes are formulas.
 # HW9-2020-12-02
 ## Question 1
 ### Write an Rcpp function for Exercise 9.4 (page 277, Statistical Computing with R).
-![Question 1](HW9-Q1.png)
+![Question 1](HW9-Q1.PNG)
 ##Answer 1
 ```{r 91}
 library(Rcpp) # Attach R package "Rcpp"
