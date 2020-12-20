@@ -1688,7 +1688,7 @@ The arguments the function takes are formulas.
 # HW9-2020-12-02
 ## Question 1
 ### Write an Rcpp function for Exercise 9.4 (page 277, Statistical Computing with R).
-![Question 1](HW9-Q1.PNG)
+![Question 1](HW9-Q1.png)
 ##Answer 1
 ```{r 91}
 library(Rcpp) # Attach R package "Rcpp"
